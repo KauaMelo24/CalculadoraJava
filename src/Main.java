@@ -11,12 +11,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
-        while (opcao != 5) {
+        while (opcao != 6) {
             System.out.println("[1] - Somar");
             System.out.println("[2] - Subtrair");
             System.out.println("[3] - Multiplicar");
             System.out.println("[4] - Dividir");
-            System.out.println("[5] - Sair");
+            System.out.println("[5] - Potência");
+            System.out.println("[6] - Sair");
 
             System.out.println("Escolha uma opção: ");
             opcao = scanner.nextInt();
@@ -68,6 +69,17 @@ public class Main {
                     break;
 
                 case 5:
+                    System.out.println("Digite a base:");
+                    primeiroNumero = scanner.nextDouble();
+                    System.out.println("Digite o expoente:");
+                    segundoNumero = scanner.nextDouble();
+                    resultado = Math.pow(primeiroNumero, segundoNumero);
+                    System.out.printf("Resultado: %.2f%n", resultado);
+
+                    break;
+
+
+                case 6:
                     System.out.println("Obrigado por utilizar a Calculadora!");
                     break;
 
