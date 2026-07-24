@@ -1,6 +1,6 @@
 # Calculadora em Java
 
-Projeto desenvolvido em Java para praticar lógica de programação.
+Projeto desenvolvido em Java para praticar lógica de programação e conceitos fundamentais da linguagem.
 
 ## Funcionalidades
 
@@ -9,22 +9,36 @@ Projeto desenvolvido em Java para praticar lógica de programação.
 - Multiplicação
 - Divisão
 - Validação de divisão por zero
+- Potência
+- Raiz quadrada
+- Validação de números negativos na raiz quadrada
 - Menu interativo
-- Uso de `while`, `switch` e `if/else`
+- Execução contínua até o usuário escolher sair
 
-## Tecnologias
+## Tecnologias utilizadas
 
 - Java
 - IntelliJ IDEA
 
-## Objetivo
+## Conceitos praticados
 
-Praticar os fundamentos da linguagem Java e desenvolver a lógica de programação através de um projeto simples e funcional.
+- Scanner para entrada de dados
+- Estruturas condicionais (`if/else`)
+- Estrutura de escolha (`switch`)
+- Estrutura de repetição (`while`)
+- Variáveis e tipos de dados
+- Operadores matemáticos
+- Classe `Math`
+- Formatação de saída com `printf`
+
+## Objetivo do projeto
+
+Desenvolver uma calculadora em Java aplicando conceitos básicos de programação, criando um programa funcional e evoluindo suas funcionalidades através de melhorias contínuas.
 
 ## Melhorias futuras
 
-- Potência
-- Raiz quadrada
 - Resto da divisão
 - Histórico de operações
 - Refatoração utilizando métodos
+- Interface gráfica
+- Tratamento de entradas inválidas
