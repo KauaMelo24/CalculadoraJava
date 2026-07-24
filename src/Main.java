@@ -11,13 +11,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
-        while (opcao != 6) {
+        while (opcao != 7) {
             System.out.println("[1] - Somar");
             System.out.println("[2] - Subtrair");
             System.out.println("[3] - Multiplicar");
             System.out.println("[4] - Dividir");
             System.out.println("[5] - Potência");
-            System.out.println("[6] - Sair");
+            System.out.println("[6] - Raiz Quadrada");
+            System.out.println("[7] - Sair");
 
             System.out.println("Escolha uma opção: ");
             opcao = scanner.nextInt();
@@ -62,7 +63,7 @@ public class Main {
                     segundoNumero = scanner.nextDouble();
                     if (segundoNumero == 0) {
                         System.out.println("Não é possível fazer divisão por 0!");
-                    }else {
+                    } else {
                         resultado = primeiroNumero / segundoNumero;
                         System.out.printf("Resultado: %.2f%n", resultado);
                     }
@@ -78,8 +79,19 @@ public class Main {
 
                     break;
 
-
                 case 6:
+                    System.out.println("Digite um número:");
+                    primeiroNumero = scanner.nextDouble();
+                    if (primeiroNumero < 0) {
+                        System.out.println("Não é possível calcular a raiz quadrada de um número negativo.");
+                    } else {
+                        resultado = Math.sqrt(primeiroNumero);
+                        System.out.printf("Resultado: %.2f%n", resultado);
+                    }
+                    break;
+
+
+                case 7:
                     System.out.println("Obrigado por utilizar a Calculadora!");
                     break;
 
