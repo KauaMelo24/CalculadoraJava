@@ -1,44 +1,58 @@
-# Calculadora em Java
+# 🧮 Calculadora Java
 
-Projeto desenvolvido em Java para praticar lógica de programação e conceitos fundamentais da linguagem.
+Uma calculadora desenvolvida em Java durante meus estudos, utilizando programação orientada à lógica e estruturas de controle.
 
-## Funcionalidades
+## 🚀 Funcionalidades
 
-- Soma
-- Subtração
-- Multiplicação
-- Divisão
-- Validação de divisão por zero
-- Potência
-- Raiz quadrada
-- Validação de números negativos na raiz quadrada
-- Menu interativo
-- Execução contínua até o usuário escolher sair
+- ✅ Soma
+- ✅ Subtração
+- ✅ Multiplicação
+- ✅ Divisão
+- ✅ Potência
+- ✅ Raiz quadrada
+- ✅ Resto da divisão
+- ✅ Histórico da última operação
+- ✅ Tratamento para divisão por zero
+- ✅ Validação para raiz quadrada de números negativos
+- ✅ Menu interativo em loop
 
-## Tecnologias utilizadas
+## 🛠️ Tecnologias
 
 - Java
 - IntelliJ IDEA
+- Git
+- GitHub
 
-## Conceitos praticados
+## 📚 Conceitos praticados
 
-- Scanner para entrada de dados
-- Estruturas condicionais (`if/else`)
-- Estrutura de escolha (`switch`)
-- Estrutura de repetição (`while`)
-- Variáveis e tipos de dados
-- Operadores matemáticos
+- Estruturas de decisão (`switch` e `if/else`)
+- Estruturas de repetição (`while`)
+- Entrada de dados com `Scanner`
 - Classe `Math`
 - Formatação de saída com `printf`
+- Manipulação de `String`
+- Controle de fluxo
+- Versionamento com Git e GitHub
 
-## Objetivo do projeto
+## 📷 Exemplo
 
-Desenvolver uma calculadora em Java aplicando conceitos básicos de programação, criando um programa funcional e evoluindo suas funcionalidades através de melhorias contínuas.
+```text
+========================
+      CALCULADORA
+========================
 
-## Melhorias futuras
+Última operação: 10.0 + 5.0 = 15.0
 
-- Resto da divisão
-- Histórico de operações
-- Refatoração utilizando métodos
-- Interface gráfica
-- Tratamento de entradas inválidas
+[1] - Somar
+[2] - Subtrair
+[3] - Multiplicar
+[4] - Dividir
+[5] - Potência
+[6] - Raiz Quadrada
+[7] - Resto da Divisão
+[8] - Sair
+```
+
+## 🎯 Objetivo
+
+Este projeto foi desenvolvido para praticar os fundamentos de Java, lógica de programação e boas práticas de versionamento com Git e GitHub.
