@@ -11,7 +11,6 @@ Projeto desenvolvido em Java para praticar lógica de programação e conceitos 
 - Validação de divisão por zero
 - Potência
 - Raiz quadrada
-- Resto da Divisão
 - Validação de números negativos na raiz quadrada
 - Menu interativo
 - Execução contínua até o usuário escolher sair
@@ -38,6 +37,7 @@ Desenvolver uma calculadora em Java aplicando conceitos básicos de programaçã
 
 ## Melhorias futuras
 
+- Resto da divisão
 - Histórico de operações
 - Refatoração utilizando métodos
 - Interface gráfica

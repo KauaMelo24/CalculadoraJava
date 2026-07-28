@@ -11,7 +11,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
+        String historico = "Nenhuma operação realizada";
+
         while (opcao != 8) {
+
+            System.out.println();
+            System.out.println("Última operação: " + historico);
+            System.out.println();
+
             System.out.println("[1] - Somar");
             System.out.println("[2] - Subtrair");
             System.out.println("[3] - Multiplicar");
@@ -34,8 +41,11 @@ public class Main {
                     primeiroNumero = scanner.nextDouble();
                     System.out.println("Digite o segundo número:");
                     segundoNumero = scanner.nextDouble();
-                    resultado = primeiroNumero + segundoNumero;
+                    resultado = primeiroNumero + segundoNumero ;
+                    historico = primeiroNumero + " + " + segundoNumero + " = " + resultado;
                     System.out.printf("Resultado: %.2f%n", resultado);
+                    System.out.println("Última operação: " + historico);
+                    System.out.println();
                     break;
 
 
@@ -45,7 +55,10 @@ public class Main {
                     System.out.println("Digite o segundo número:");
                     segundoNumero = scanner.nextDouble();
                     resultado = primeiroNumero - segundoNumero;
+                    historico = primeiroNumero + " - " + segundoNumero + " = " + resultado;
                     System.out.printf("Resultado: %.2f%n", resultado);
+                    System.out.println("Última operação: " + historico);
+                    System.out.println();
                     break;
 
                 case 3:
@@ -54,7 +67,10 @@ public class Main {
                     System.out.println("Digite o segundo número:");
                     segundoNumero = scanner.nextDouble();
                     resultado = primeiroNumero * segundoNumero;
+                    historico = primeiroNumero + " * " + segundoNumero + " = " + resultado;
                     System.out.printf("Resultado: %.2f%n", resultado);
+                    System.out.println("Última operação: " + historico);
+                    System.out.println();
                     break;
 
                 case 4:
@@ -66,7 +82,10 @@ public class Main {
                         System.out.println("Não é possível fazer divisão por 0!");
                     } else {
                         resultado = primeiroNumero / segundoNumero;
+                        historico = primeiroNumero + " / " + segundoNumero + " = " + resultado;
                         System.out.printf("Resultado: %.2f%n", resultado);
+                        System.out.println("Última operação: " + historico);
+                        System.out.println();
                     }
                     break;
 
@@ -76,7 +95,10 @@ public class Main {
                     System.out.println("Digite o expoente:");
                     segundoNumero = scanner.nextDouble();
                     resultado = Math.pow(primeiroNumero, segundoNumero);
+                    historico = primeiroNumero + " ^ " + segundoNumero + " = " + resultado;
                     System.out.printf("Resultado: %.2f%n", resultado);
+                    System.out.println("Última operação: " + historico);
+                    System.out.println();
 
                     break;
 
@@ -87,7 +109,10 @@ public class Main {
                         System.out.println("Não é possível calcular a raiz quadrada de um número negativo.");
                     } else {
                         resultado = Math.sqrt(primeiroNumero);
+                        historico = "√" + primeiroNumero + " = " + resultado;
                         System.out.printf("Resultado: %.2f%n", resultado);
+                        System.out.println("Última operação: " + historico);
+                        System.out.println();
                     }
                     break;
 
@@ -100,7 +125,10 @@ public class Main {
                         System.out.println("Não é possível calcular o resto da divisão por 0!");
                     } else {
                         resultado = primeiroNumero % segundoNumero;
+                        historico = primeiroNumero + " % " + segundoNumero + " = " + resultado;
                         System.out.printf("Resultado: %.2f%n", resultado);
+                        System.out.println("Última operação: " + historico);
+                        System.out.println();
                     }
                     break;
 
