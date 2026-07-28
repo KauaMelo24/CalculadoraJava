@@ -11,14 +11,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
-        while (opcao != 7) {
+        while (opcao != 8) {
             System.out.println("[1] - Somar");
             System.out.println("[2] - Subtrair");
             System.out.println("[3] - Multiplicar");
             System.out.println("[4] - Dividir");
             System.out.println("[5] - Potência");
             System.out.println("[6] - Raiz Quadrada");
-            System.out.println("[7] - Sair");
+            System.out.println("[7] - Resto da Divisão");
+            System.out.println("[8] - Sair");
 
             System.out.println("Escolha uma opção: ");
             opcao = scanner.nextInt();
@@ -90,8 +91,21 @@ public class Main {
                     }
                     break;
 
-
                 case 7:
+                    System.out.println("Digite um número:");
+                    primeiroNumero = scanner.nextDouble();
+                    System.out.println("Digite o segundo número:");
+                    segundoNumero = scanner.nextDouble();
+                    if (segundoNumero == 0) {
+                        System.out.println("Não é possível calcular o resto da divisão por 0!");
+                    } else {
+                        resultado = primeiroNumero % segundoNumero;
+                        System.out.printf("Resultado: %.2f%n", resultado);
+                    }
+                    break;
+
+
+                case 8:
                     System.out.println("Obrigado por utilizar a Calculadora!");
                     break;
 
