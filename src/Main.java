@@ -2,6 +2,28 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void mostrarMenu() {
+        System.out.println("[1] - Somar");
+        System.out.println("[2] - Subtrair");
+        System.out.println("[3] - Multiplicar");
+        System.out.println("[4] - Dividir");
+        System.out.println("[5] - Potência");
+        System.out.println("[6] - Raiz Quadrada");
+        System.out.println("[7] - Resto da Divisão");
+        System.out.println("[8] - Sair");
+    }
+
+    public static double lerNumeros(Scanner scanner, String mensagem) {
+        System.out.println(mensagem);
+        return scanner.nextDouble();
+    }
+
+    public static void mostrarResultado(double resultado, String historico){
+        System.out.printf("Resultado: %.2f%n", resultado);
+        System.out.println("Última operação: " + historico);
+        System.out.println();
+    }
+
     public static void main(String[] args) {
 
         System.out.println("========================");
@@ -19,14 +41,7 @@ public class Main {
             System.out.println("Última operação: " + historico);
             System.out.println();
 
-            System.out.println("[1] - Somar");
-            System.out.println("[2] - Subtrair");
-            System.out.println("[3] - Multiplicar");
-            System.out.println("[4] - Dividir");
-            System.out.println("[5] - Potência");
-            System.out.println("[6] - Raiz Quadrada");
-            System.out.println("[7] - Resto da Divisão");
-            System.out.println("[8] - Sair");
+            mostrarMenu();
 
             System.out.println("Escolha uma opção: ");
             opcao = scanner.nextInt();
@@ -37,98 +52,78 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Digite o primeiro número:");
-                    primeiroNumero = scanner.nextDouble();
-                    System.out.println("Digite o segundo número:");
-                    segundoNumero = scanner.nextDouble();
+                    primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
+                    segundoNumero = lerNumeros(scanner, "Digite o segundo número:");
                     resultado = primeiroNumero + segundoNumero ;
                     historico = primeiroNumero + " + " + segundoNumero + " = " + resultado;
-                    System.out.printf("Resultado: %.2f%n", resultado);
-                    System.out.println("Última operação: " + historico);
-                    System.out.println();
+
+                    mostrarResultado(resultado, historico);
                     break;
 
 
                 case 2:
-                    System.out.println("Digite o primeiro número:");
-                    primeiroNumero = scanner.nextDouble();
-                    System.out.println("Digite o segundo número:");
-                    segundoNumero = scanner.nextDouble();
+                    primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
+                    segundoNumero = lerNumeros(scanner,"Digite o segundo número:");
                     resultado = primeiroNumero - segundoNumero;
                     historico = primeiroNumero + " - " + segundoNumero + " = " + resultado;
-                    System.out.printf("Resultado: %.2f%n", resultado);
-                    System.out.println("Última operação: " + historico);
-                    System.out.println();
+
+                    mostrarResultado(resultado, historico);
                     break;
 
                 case 3:
-                    System.out.println("Digite o primeiro número:");
-                    primeiroNumero = scanner.nextDouble();
-                    System.out.println("Digite o segundo número:");
-                    segundoNumero = scanner.nextDouble();
+                    primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
+                    segundoNumero = lerNumeros(scanner, "Digite o segundo número:");
                     resultado = primeiroNumero * segundoNumero;
                     historico = primeiroNumero + " * " + segundoNumero + " = " + resultado;
-                    System.out.printf("Resultado: %.2f%n", resultado);
-                    System.out.println("Última operação: " + historico);
-                    System.out.println();
+
+                    mostrarResultado(resultado, historico);
                     break;
 
                 case 4:
-                    System.out.println("Digite o primeiro número:");
-                    primeiroNumero = scanner.nextDouble();
-                    System.out.println("Digite o segundo número:");
-                    segundoNumero = scanner.nextDouble();
+                    primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
+                    segundoNumero = lerNumeros(scanner, "Digite o segundo número:");
                     if (segundoNumero == 0) {
                         System.out.println("Não é possível fazer divisão por 0!");
                     } else {
                         resultado = primeiroNumero / segundoNumero;
                         historico = primeiroNumero + " / " + segundoNumero + " = " + resultado;
-                        System.out.printf("Resultado: %.2f%n", resultado);
-                        System.out.println("Última operação: " + historico);
-                        System.out.println();
+
+                        mostrarResultado(resultado, historico);
                     }
                     break;
 
                 case 5:
-                    System.out.println("Digite a base:");
-                    primeiroNumero = scanner.nextDouble();
-                    System.out.println("Digite o expoente:");
-                    segundoNumero = scanner.nextDouble();
+                    primeiroNumero = lerNumeros(scanner, "Digite a base:");
+                    segundoNumero = lerNumeros(scanner, "Digite o expoente:");
                     resultado = Math.pow(primeiroNumero, segundoNumero);
                     historico = primeiroNumero + " ^ " + segundoNumero + " = " + resultado;
-                    System.out.printf("Resultado: %.2f%n", resultado);
-                    System.out.println("Última operação: " + historico);
-                    System.out.println();
+
+                    mostrarResultado(resultado, historico);
 
                     break;
 
                 case 6:
-                    System.out.println("Digite um número:");
-                    primeiroNumero = scanner.nextDouble();
+                    primeiroNumero = lerNumeros(scanner, "Digite um número:");
                     if (primeiroNumero < 0) {
                         System.out.println("Não é possível calcular a raiz quadrada de um número negativo.");
                     } else {
                         resultado = Math.sqrt(primeiroNumero);
                         historico = "√" + primeiroNumero + " = " + resultado;
-                        System.out.printf("Resultado: %.2f%n", resultado);
-                        System.out.println("Última operação: " + historico);
-                        System.out.println();
+
+                        mostrarResultado(resultado, historico);
                     }
                     break;
 
                 case 7:
-                    System.out.println("Digite um número:");
-                    primeiroNumero = scanner.nextDouble();
-                    System.out.println("Digite o segundo número:");
-                    segundoNumero = scanner.nextDouble();
+                    primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
+                    segundoNumero = lerNumeros(scanner, "Digite o segundo número:");
                     if (segundoNumero == 0) {
                         System.out.println("Não é possível calcular o resto da divisão por 0!");
                     } else {
                         resultado = primeiroNumero % segundoNumero;
                         historico = primeiroNumero + " % " + segundoNumero + " = " + resultado;
-                        System.out.printf("Resultado: %.2f%n", resultado);
-                        System.out.println("Última operação: " + historico);
-                        System.out.println();
+
+                        mostrarResultado(resultado, historico);
                     }
                     break;
 
