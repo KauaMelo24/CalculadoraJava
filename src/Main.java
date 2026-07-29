@@ -33,6 +33,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
 
+        Calculadora calculadora = new Calculadora();
+
         String historico = "Nenhuma operação realizada";
 
         while (opcao != 8) {
@@ -54,7 +56,7 @@ public class Main {
                 case 1:
                     primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
                     segundoNumero = lerNumeros(scanner, "Digite o segundo número:");
-                    resultado = primeiroNumero + segundoNumero ;
+                    resultado = calculadora.somar(primeiroNumero,segundoNumero);
                     historico = primeiroNumero + " + " + segundoNumero + " = " + resultado;
 
                     mostrarResultado(resultado, historico);
@@ -64,7 +66,7 @@ public class Main {
                 case 2:
                     primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
                     segundoNumero = lerNumeros(scanner,"Digite o segundo número:");
-                    resultado = primeiroNumero - segundoNumero;
+                    resultado = calculadora.subtrair(primeiroNumero,segundoNumero);
                     historico = primeiroNumero + " - " + segundoNumero + " = " + resultado;
 
                     mostrarResultado(resultado, historico);
@@ -73,7 +75,7 @@ public class Main {
                 case 3:
                     primeiroNumero = lerNumeros(scanner, "Digite o primeiro número:");
                     segundoNumero = lerNumeros(scanner, "Digite o segundo número:");
-                    resultado = primeiroNumero * segundoNumero;
+                    resultado = calculadora.multiplicar(primeiroNumero,segundoNumero);
                     historico = primeiroNumero + " * " + segundoNumero + " = " + resultado;
 
                     mostrarResultado(resultado, historico);
@@ -85,7 +87,7 @@ public class Main {
                     if (segundoNumero == 0) {
                         System.out.println("Não é possível fazer divisão por 0!");
                     } else {
-                        resultado = primeiroNumero / segundoNumero;
+                        resultado = calculadora.dividir(primeiroNumero,segundoNumero);
                         historico = primeiroNumero + " / " + segundoNumero + " = " + resultado;
 
                         mostrarResultado(resultado, historico);
@@ -95,7 +97,7 @@ public class Main {
                 case 5:
                     primeiroNumero = lerNumeros(scanner, "Digite a base:");
                     segundoNumero = lerNumeros(scanner, "Digite o expoente:");
-                    resultado = Math.pow(primeiroNumero, segundoNumero);
+                    resultado = calculadora.potencia(primeiroNumero,segundoNumero);
                     historico = primeiroNumero + " ^ " + segundoNumero + " = " + resultado;
 
                     mostrarResultado(resultado, historico);
@@ -107,7 +109,7 @@ public class Main {
                     if (primeiroNumero < 0) {
                         System.out.println("Não é possível calcular a raiz quadrada de um número negativo.");
                     } else {
-                        resultado = Math.sqrt(primeiroNumero);
+                        resultado = calculadora.raizQuadrada(primeiroNumero);
                         historico = "√" + primeiroNumero + " = " + resultado;
 
                         mostrarResultado(resultado, historico);
@@ -120,7 +122,7 @@ public class Main {
                     if (segundoNumero == 0) {
                         System.out.println("Não é possível calcular o resto da divisão por 0!");
                     } else {
-                        resultado = primeiroNumero % segundoNumero;
+                        resultado = calculadora.restoDivisao(primeiroNumero,segundoNumero);
                         historico = primeiroNumero + " % " + segundoNumero + " = " + resultado;
 
                         mostrarResultado(resultado, historico);

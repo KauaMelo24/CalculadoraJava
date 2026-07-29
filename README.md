@@ -33,6 +33,32 @@ Uma calculadora desenvolvida em Java durante meus estudos, utilizando programaç
 - Manipulação de `String`
 - Controle de fluxo
 - Versionamento com Git e GitHub
+- Criação de classes e objetos
+- Métodos com parâmetros e retorno (`return`)
+- Separação de responsabilidades utilizando orientação a objetos
+
+## 🏗️ Estrutura do projeto
+
+O projeto foi refatorado utilizando orientação a objetos, separando as responsabilidades entre as classes.
+
+### Main.java
+Responsável pela interação com o usuário:
+
+- Exibição do menu
+- Entrada de dados
+- Controle das opções escolhidas
+- Exibição dos resultados
+
+### Calculadora.java
+Responsável pelos cálculos matemáticos:
+
+- `somar()`
+- `subtrair()`
+- `multiplicar()`
+- `dividir()`
+- `potencia()`
+- `raizQuadrada()`
+- `restoDivisao()`
 
 ## 📷 Exemplo
 
@@ -51,8 +77,3 @@ Uma calculadora desenvolvida em Java durante meus estudos, utilizando programaç
 [6] - Raiz Quadrada
 [7] - Resto da Divisão
 [8] - Sair
-```
-
-## 🎯 Objetivo
-
-Este projeto foi desenvolvido para praticar os fundamentos de Java, lógica de programação e boas práticas de versionamento com Git e GitHub.
