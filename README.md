@@ -1,6 +1,6 @@
 # 🧮 Calculadora Java
 
-Uma calculadora desenvolvida em Java durante meus estudos, utilizando programação orientada à lógica e estruturas de controle.
+Uma calculadora desenvolvida em Java durante meus estudos, utilizando programação orientada a objetos, lógica de programação e estruturas de controle.
 
 ## 🚀 Funcionalidades
 
@@ -11,54 +11,42 @@ Uma calculadora desenvolvida em Java durante meus estudos, utilizando programaç
 - ✅ Potência
 - ✅ Raiz quadrada
 - ✅ Resto da divisão
-- ✅ Histórico da última operação
+- ✅ Histórico completo das operações
+- ✅ Visualização do histórico pelo menu
 - ✅ Tratamento para divisão por zero
 - ✅ Validação para raiz quadrada de números negativos
 - ✅ Menu interativo em loop
 
 ## 🛠️ Tecnologias
 
-- Java
+- Java 21
 - IntelliJ IDEA
 - Git
 - GitHub
 
 ## 📚 Conceitos praticados
 
+- Programação orientada a objetos
+- Criação e utilização de classes
+- Criação de objetos
+- Métodos
+- Encapsulamento
 - Estruturas de decisão (`switch` e `if/else`)
 - Estruturas de repetição (`while`)
 - Entrada de dados com `Scanner`
 - Classe `Math`
 - Formatação de saída com `printf`
 - Manipulação de `String`
+- `ArrayList`
+- `List`
 - Controle de fluxo
 - Versionamento com Git e GitHub
-- Criação de classes e objetos
-- Métodos com parâmetros e retorno (`return`)
-- Separação de responsabilidades utilizando orientação a objetos
 
 ## 🏗️ Estrutura do projeto
 
-O projeto foi refatorado utilizando orientação a objetos, separando as responsabilidades entre as classes.
-
-### Main.java
-Responsável pela interação com o usuário:
-
-- Exibição do menu
-- Entrada de dados
-- Controle das opções escolhidas
-- Exibição dos resultados
-
-### Calculadora.java
-Responsável pelos cálculos matemáticos:
-
-- `somar()`
-- `subtrair()`
-- `multiplicar()`
-- `dividir()`
-- `potencia()`
-- `raizQuadrada()`
-- `restoDivisao()`
+- `Main.java` — responsável pelo menu, entrada de dados e interação com o usuário.
+- `Calculadora.java` — responsável pelas operações matemáticas.
+- `Historico.java` — responsável por armazenar e exibir as operações realizadas.
 
 ## 📷 Exemplo
 
@@ -67,8 +55,6 @@ Responsável pelos cálculos matemáticos:
       CALCULADORA
 ========================
 
-Última operação: 10.0 + 5.0 = 15.0
-
 [1] - Somar
 [2] - Subtrair
 [3] - Multiplicar
@@ -76,4 +62,7 @@ Responsável pelos cálculos matemáticos:
 [5] - Potência
 [6] - Raiz Quadrada
 [7] - Resto da Divisão
-[8] - Sair
+[8] - Mostrar Histórico
+[9] - Sair
+
+Escolha uma opção:
