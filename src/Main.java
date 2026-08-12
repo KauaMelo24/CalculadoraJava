@@ -11,7 +11,8 @@ public class Main {
         System.out.println("[6] - Raiz Quadrada");
         System.out.println("[7] - Resto da Divisão");
         System.out.println("[8] - Mostrar Histórico");
-        System.out.println("[9] - Sair");
+        System.out.println("[9] - Limpar Histórico");
+        System.out.println("[10] - Sair");
     }
 
     public static double lerNumeros(Scanner scanner, String mensagem) {
@@ -37,7 +38,7 @@ public class Main {
         Calculadora calculadora = new Calculadora();
         Historico historico = new Historico();
 
-        while (opcao != 9) {
+        while (opcao != 10) {
 
             mostrarMenu();
 
@@ -138,6 +139,11 @@ public class Main {
                     break;
 
                 case 9:
+                    historico.limpar();
+                    System.out.println("O Histórico foi limpo!");
+                    break;
+
+                case 10:
                     System.out.println("Obrigado por utilizar a Calculadora!");
                     break;
 
